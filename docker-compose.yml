@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  server:
+    build: .
+    command: python server.py 1.1
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./results:/app/results
+
+  client0:
+    build: .
+    command: python client.py 0 1.1
+    depends_on:
+      - server
+    environment:
+      - SERVER_ADDRESS=server:8080
+
+  client1:
+    build: .
+    command: python client.py 1 1.1
+    depends_on:
+      - server
+    environment:
+      - SERVER_ADDRESS=server:8080
+
+  client2:
+    build: .
+    command: python client.py 2 1.1
+    depends_on:
+      - server
+    environment:
+      - SERVER_ADDRESS=server:8080

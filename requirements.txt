@@ -1,0 +1,6 @@
+flwr==1.10.0
+tensorflow==2.16.1
+numpy==1.26.4
+matplotlib==3.9.2
+scikit-learn==1.5.2
+pandas>=2.0.0

@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: dp-accounting
+Version: 0.4.3
+Summary: Tools for tracking differential privacy budgets
+Home-page: https://github.com/google/differential-privacy/
+Author: Google Differential Privacy Team
+Author-email: dp-open-source@google.com
+License: Apache 2.0
+Keywords: differential-privacy accounting
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: absl-py ~=1.0
+Requires-Dist: attrs >=22
+Requires-Dist: dm-tree ~=0.1.8
+Requires-Dist: mpmath ~=1.2
+Requires-Dist: numpy ~=1.21
+Requires-Dist: scipy ~=1.7
+
+# Differential Privacy Accounting
+
+This directory contains tools for tracking differential privacy budgets,
+available as part of the
+[Google differential privacy library](https://github.com/google/differential-privacy).
+
+The set of DpEvent classes allow you to describe complex differentially private
+mechanisms such as Laplace and Gaussian, subsampling mechanisms, and their
+compositions. The PrivacyAccountant classes can ingest DpEvents and return the
+ε, δ of the composite mechanism. Privacy Loss Distributions (PLDs) and RDP
+accounting are currently supported.
+
+More detailed definitions and references about PLDs can be found
+[in our supplementary pdf document](https://github.com/google/differential-privacy/tree/main/common_docs/Privacy_Loss_Distributions.pdf).
+
+Our library only support Python version >= 3.9. We test this library on Linux
+with Python version 3.9. If you experience any problems, please file an issue on
+GitHub, also for other platforms or Python versions.
+
