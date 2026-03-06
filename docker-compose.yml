@@ -3,7 +3,7 @@ version: '3.8'
 services:
   server:
     build: .
-    command: python server.py 1.1
+    command: python src/server.py 1.1
     ports:
       - "8080:8080"
     volumes:
@@ -11,7 +11,7 @@ services:
 
   client0:
     build: .
-    command: python client.py 0 1.1
+    command: python src/client.py 0 1.1
     depends_on:
       - server
     environment:
@@ -19,7 +19,7 @@ services:
 
   client1:
     build: .
-    command: python client.py 1 1.1
+    command: python src/client.py 1 1.1
     depends_on:
       - server
     environment:
@@ -27,7 +27,7 @@ services:
 
   client2:
     build: .
-    command: python client.py 2 1.1
+    command: python src/client.py 2 1.1
     depends_on:
       - server
     environment:

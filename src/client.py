@@ -1,10 +1,3 @@
-"""
-DP-FedAvg Client Implementation (Manual DP-SGD Version)
-------------------------------------------------------
-This version implements Gradient Clipping and Noise Addition manually 
-using TensorFlow GradientTape to avoid library version conflicts.
-"""
-
 import flwr as fl
 import tensorflow as tf
 import numpy as np

@@ -1,5 +1,20 @@
-data/
-venv/
+# Byte-compiled / optimized / DLL files
 __pycache__/
-results/*.json
-results/*.png
+*.py[cod]
+*$py.class
+
+# Virtual Environment (Very important to ignore)
+venv/
+ENV/
+env/
+
+# Data and Results (Large files)
+data/
+results/
+
+# OS generated files
+.DS_Store
+desktop.ini
+
+# Docker local data
+.docker/

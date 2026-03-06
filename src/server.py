@@ -1,8 +1,3 @@
-"""
-DP-FedAvg Server Implementation
-Modified to save unique result files based on noise levels.
-"""
-
 import flwr as fl
 from flwr.server.history import History
 from flwr.server.strategy import FedAvg
